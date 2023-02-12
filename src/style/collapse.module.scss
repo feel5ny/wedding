@@ -59,6 +59,9 @@
       &.bank {
         height: 140px;
       }
+      &.parking {
+        height: 140px;
+      }
     }
   }
   &-row {
@@ -80,18 +83,12 @@
   }
 }
 
-.parking, .flower {
-  height: 140px;
+.parking, .flower, .bank {
   &>.collapse-box-row {
     display: block;
   }
 }
 
-.bank {
-  &>.collapse-box-row {
-    display: block;
-  }
-}
 
 .collapse-box-button {
   text-align: center;
