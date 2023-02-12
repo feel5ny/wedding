@@ -1,4 +1,5 @@
 import { showToast } from "./toast";
+import copy from "copy-to-clipboard";
 
 const $wayToComeMapBackButton = document.querySelector(".map-back-button");
 const $wayToComeList = document.querySelector(".way-to-come-list");
@@ -90,12 +91,12 @@ function renderList() {
 
     if (type === "copy") {
       $liTag.addEventListener("click", async function () {
+        const TEXT = "서울시 중구 정동길 9 프란치스코 작은형제회 수도원 성당";
         try {
-          await navigator.clipboard.writeText(
-            "서울시 중구 정동길 9 프란치스코 작은형제회 수도원 성당"
-          );
-          showToast("복사가 완료되었습니다.");
+          if (copy(TEXT)) return showToast("복사가 완료되었습니다.");
+          return showToast("복사가 실패하였습니다.");
         } catch (err) {
+          alert(JSON.stringify(err.message));
           showToast("복사가 실패하였습니다.");
         }
       });
