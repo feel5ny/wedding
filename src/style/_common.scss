@@ -20,9 +20,6 @@ body, button {
 textarea {
   resize: none !important;
 }
-footer {
-  font-weight: 300;
-}
 #wrapper {
   display: flex;
   justify-content: center;
@@ -125,9 +122,14 @@ footer {
 
 
 footer {
+  font-weight: 300;
   padding: 24px;
   text-align: center;
   color: $subColor;
+  &>a {
+    font-weight: 700;
+    text-decoration: underline;
+  }
 }
 
 .heart {
