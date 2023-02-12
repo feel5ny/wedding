@@ -1,3 +1,7 @@
+import "./swipe.js";
+import "./style/main.scss";
+import "./firebase.js";
+
 import { initGallery } from "./components/gallery";
 import { initHero } from "./components/hero";
 import { initPreview } from "./components/preview";
@@ -8,8 +12,6 @@ import { initToast } from "./components/toast";
 import { initModal } from "./components/modal";
 import { initLocationHash } from "./controller/location-hash";
 import { initDialog } from "./components/dialog";
-import "./swipe.js";
-import "./style/main.scss";
 
 init();
 
