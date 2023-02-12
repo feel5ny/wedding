@@ -2,25 +2,19 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { getDatabase, ref, set, onValue } from "firebase/database";
-import {
-  getStorage,
-  ref as storageRef,
-  getDownloadURL,
-  listAll,
-} from "firebase/storage";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBAIkIMTKiEXVdjQ7mAjnhff20LkQGlz7A",
-  authDomain: "wedding-29932.firebaseapp.com",
-  projectId: "wedding-29932",
-  storageBucket: "wedding-29932.appspot.com",
-  messagingSenderId: "858400201171",
-  appId: "1:858400201171:web:c5a5920a4eba6e53913726",
-  measurementId: "G-15X2S07TQK",
+  apiKey: "AIzaSyAV9DQ2Ets0xInLZ9oNlcj4DhSj2v9gwPY",
+  authDomain: "nayoung-wedding.firebaseapp.com",
+  projectId: "nayoung-wedding",
+  storageBucket: "nayoung-wedding.appspot.com",
+  messagingSenderId: "298832266524",
+  appId: "1:298832266524:web:73566bf3a15f1ac564a6d9",
+  measurementId: "G-HRL55BYNPH",
   databaseURL:
     "https://wedding-29932-default-rtdb.asia-southeast1.firebasedatabase.app/",
 };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
