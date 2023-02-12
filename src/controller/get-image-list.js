@@ -4,7 +4,7 @@ import {
   getDownloadURL,
   listAll,
 } from "firebase/storage";
-import { toHiddenFixed, toShow, toShowFixed } from "../util";
+import { toHiddenFixed, toShowFixed } from "../util";
 import {
   IMAGE_PNG_LIST,
   IMAGE_JPG_LIST,
@@ -17,11 +17,11 @@ const storage = getStorage();
 
 export async function getImageList() {
   const heroImages = await getHeroImage();
+  IMAGE_HERO_URL_LIST.push(...heroImages);
+  isLoading(false);
   const [jpg, png] = await getWeddingImageList();
   IMAGE_PNG_LIST.push(...png);
   IMAGE_JPG_LIST.push(...jpg);
-  IMAGE_HERO_URL_LIST.push(...heroImages);
-  isLoading(false);
 }
 
 async function getWeddingImageList(rootPath) {
