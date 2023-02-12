@@ -5,12 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "dev:build": "vite ./dist",
+    "build": "vite build",
     "preview": "vite preview",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "concurrently 'npm run watch:tw' 'npm run watch:sass'",
-    "watch:tw": "npx tailwindcss -i ./src/index.css -o ./dist/output-tw.css --watch",
-    "watch:sass": "sass --watch ./src/style/style.scss ./dist/output-scss.css"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",

@@ -1,3 +1,42 @@
+@font-face {
+  font-family: 'GangwonEdu';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GangwonEdu';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFLightA.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+body, button {
+  font-family: 'GangwonEdu';
+  font-weight: 700;
+  background-color: #fffae9;
+}
+textarea {
+  resize: none !important;
+}
+#wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#container {
+  width: 600px;
+  max-width: 600px;
+  background-color: $backgroundColor;
+}
+
+.none {
+  display: none;
+}
+
 @mixin fixedContainer {
   position: absolute;
   top: 0;

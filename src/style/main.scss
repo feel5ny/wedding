@@ -1,0 +1,23 @@
+@import 'reset';
+@import 'variables';
+@import 'common';
+
+// component
+@import 'hero.module.scss';
+@import 'intro.module.scss';
+@import 'gallery.module.scss';
+@import 'way-to-come.module.scss';
+@import 'collapse.module.scss';
+@import 'button-image.module.scss';
+@import 'comment.module.scss';
+@import 'check-password.module.scss';
+
+// feadback
+@import 'modal.module.scss';
+@import 'toast.module.scss';
+@import 'dialog.module.scss';
+
+// tailwind
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

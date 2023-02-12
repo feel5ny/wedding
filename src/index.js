@@ -5,14 +5,13 @@ import { initWayToCome } from "./components/way-to-come";
 import { initCollapseBox } from "./components/collapse-box";
 import { getImageList } from "./controller/get-image-list";
 import { initToast } from "./components/toast";
-import { initGuestBook } from "./components/guest-book";
-import { initCommentList } from "./components/comment-list";
-import { hiddenModal, initModal } from "./components/modal";
+import { initModal } from "./components/modal";
 import { initLocationHash } from "./controller/location-hash";
 import { initDialog } from "./components/dialog";
+import "./swipe.js";
+import "./style/main.scss";
 
 init();
-const $modal = document.querySelector("#modal");
 
 async function init() {
   await getImageList();
@@ -22,8 +21,8 @@ async function init() {
   initPreview();
   initWayToCome();
   initCollapseBox();
-  initGuestBook();
-  initCommentList();
+  // initGuestBook();
+  // initCommentList();
   initModal();
   initDialog();
   initLocationHash();
