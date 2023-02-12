@@ -80,8 +80,14 @@
   }
 }
 
-.parking, .flower, .bank {
+.parking, .flower {
   height: 140px;
+  &>.collapse-box-row {
+    display: block;
+  }
+}
+
+.bank {
   &>.collapse-box-row {
     display: block;
   }
