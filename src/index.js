@@ -12,11 +12,13 @@ import { initToast } from "./components/toast";
 import { initModal } from "./components/modal";
 import { initLocationHash } from "./controller/location-hash";
 import { initDialog } from "./components/dialog";
+import { initHeartRain } from "./components/heart-rain.js";
 
 init();
 
 async function init() {
   await getImageList();
+  initHeartRain();
   initToast();
   initHero();
   initGallery();
