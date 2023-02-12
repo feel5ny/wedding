@@ -1,0 +1,87 @@
+.gallery {
+  overflow: hidden;
+  width: 100vw;
+  max-width: 600px;
+  margin-bottom: 90px;
+  &-list {
+    overflow: auto;
+    display: flex;
+    padding: 24px;
+  }
+  &-card {
+    width: 240px;
+    height: 360px;
+    min-width: 240px;
+    min-height: 360px;
+    border-radius: 12px;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.15));
+    margin-right: 12px;
+    background-size: 220%;
+    background-position-y: 10px;
+    cursor: pointer;
+    & > img {
+      width: 100%;
+    }
+  }
+  
+} 
+
+
+.preview {
+  @include fixedContainer;
+  z-index: 200;
+  &-container {
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-item {
+    position: absolute;
+    height: 100vh;
+    max-width: unset;
+  }
+  &-page {
+    padding: 12px;
+    font-size: 18px;
+  }
+  &-close {
+    padding: 12px;
+    margin: 8px;
+  }
+  &-navigation {
+    color: $subColor;
+    z-index: 1;
+    position: relative;
+    width: 600px;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 24px;
+    &-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    &-horizontal {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &-arrow {
+    padding: 12px;
+    &-right {
+      transform: rotate(-90deg);
+    }
+    &-left {
+      transform: rotate(90deg);
+    }
+  }
+}

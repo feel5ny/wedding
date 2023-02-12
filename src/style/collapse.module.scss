@@ -1,0 +1,111 @@
+@mixin collapseBoxStyle {
+  background-color: white;
+  border: 1px solid $subColor;
+}
+.collapse-list {
+  margin-top: 14px;
+  margin-bottom: 65px;
+}
+.collapse-box {
+  margin: 0 20px;
+
+  &-container {
+    position: relative;
+    margin-bottom: 14px;
+  }
+  &-title {
+    @include collapseBoxStyle;
+    padding: 10px 16px;
+    z-index: 1;
+    cursor: pointer;
+    &.fold {
+      border-radius: 12px;
+      transition: all .4s ease-in-out;
+    }
+    &.unfold {
+      border-radius: 12px 12px 0px 0px;
+      transition: all .4s ease-in-out;
+    }
+  }
+  &-body {
+    background-color: white;
+    border-radius: 0px 0px 12px 12px;
+    width: 100%;
+    border: 1px solid $subColor;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-top-width: 0px;
+    &.fold {
+      height: 0px;
+      border-bottom-width: 0px;
+      transition: all .4s ease-in-out;
+      padding: 0px;    
+      overflow: hidden;
+    }
+    &.unfold {
+      padding: 16px 0px;
+      padding-top: 10px;
+      border-bottom-width: 1px;
+      transition: all .4s ease-in-out;
+      overflow: hidden;
+      &.subway {
+        height: 160px;
+      }
+      &.bus {
+        height: 252px;
+      }
+      &.flower {
+        height: 188px;
+      }
+      &.bank {
+        height: 140px;
+      }
+    }
+  }
+  &-row {
+    padding: 10px 16px;
+    display: flex;
+  }
+  &-color-bar {
+    width: 10px;
+    min-width: 10px;
+    background: #8936E0;
+    height: 48px; 
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+  &-info {
+    &>p {
+      line-height: 20px;
+    }
+  }
+}
+
+.parking, .flower {
+  height: 140px;
+  &>.collapse-box-row {
+    display: block;
+  }
+}
+
+.collapse-box-button {
+  text-align: center;
+}
+.subway-line-1-2 {
+  background: linear-gradient(180deg, $subWayLine1 0%, $subWayLine1 50%, $subWayLine2 50%, $subWayLine2 100%);
+}
+
+.subway-line-5 {
+  background: $subWayLine5;
+}
+
+.bus-blue {
+  background: $BusBlue;
+}
+
+.bus-green {
+  background: $BusGreen;
+}
+
+.bus-red {
+  background: $BusRed;
+}

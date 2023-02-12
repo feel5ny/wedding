@@ -1,0 +1,63 @@
+// font-size
+$h1: 28px;
+$h3: 18px;
+$body: 16px;
+
+// font-color
+$primaryColor: #FED363;
+$secondaryColor: #4A5609;
+$subColor: #647020;
+$backgroundColor: #F5EAD0;
+$disabledColor: #F4F4F4;
+$errorColor: #FF5C00;
+
+$subWayLine1: #263C96;
+$subWayLine2: #26B44A;
+$subWayLine5: #8936E0;
+
+$BusBlue: #1681FF;
+$BusGreen: #26B44A;
+$BusRed: #FF5C00;
+
+
+@mixin normal-button {
+  background-color: rgba(74, 86, 9, 0.15);
+  padding: 10px 30px;
+  color: $secondaryColor;
+  border: unset;
+  border-radius: 32px;  
+  font-size: 16px;
+  cursor: pointer;
+  min-width: 120px;
+}
+
+@mixin button-disabled {
+  color: white;
+  background-color:  rgba(74, 86, 9, 0.15);
+}
+
+.normal-button {
+  @include normal-button;
+  &:disabled {
+    @include button-disabled;
+  }
+}
+
+@mixin button-type-02 {
+  background-color: $secondaryColor;
+  padding: 10px 30px;
+  color: white;
+  border: unset;
+  border-radius: 32px;  
+  font-size: 16px;
+  cursor: pointer;
+  min-width: 120px;
+}
+
+
+.button-type-02 {
+  @include button-type-02;
+  &:disabled {
+    @include button-disabled;
+  }
+}

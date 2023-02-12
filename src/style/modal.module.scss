@@ -1,0 +1,71 @@
+@mixin fixed-dim {
+  background-color: rgba(0,0,0,0.4);
+  width: 100%;
+  height: 100vh;
+}
+
+@mixin fixed-feedback-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#modal {
+  @include fixed-feedback-wrapper;
+  z-index: 200;
+}
+
+.modal {
+  &-body {
+    position: absolute;
+    background: white;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px;
+    bottom: -400px;
+    border-radius: 12px 12px 0px 0px;
+  }
+  &-dim {
+    @include fixed-dim;
+  }
+  &-loading {
+    width: 100%;
+    min-height: 288px;
+    height: 288px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $primaryColor;
+  }
+}
+
+.modalIn {
+  animation: modalIn 0.3s forwards;
+}
+
+.modalOut {
+  animation: modalOut 0.3s forwards;
+}
+
+.none {
+  display: none !important;
+}
+
+@keyframes modalIn {
+  0% {
+    bottom: -400px;
+  }
+  100% {
+    bottom: 0px;
+  }
+}
+
+@keyframes modalOut {
+  100% {
+    bottom: -400px;
+  }
+}

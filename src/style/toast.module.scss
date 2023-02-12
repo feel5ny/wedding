@@ -1,0 +1,24 @@
+
+#toast {
+  padding: 12px;
+  position: fixed;
+  max-width: 600px;
+  text-align: center;
+  z-index: 300;
+  &> p {
+    background-color: rgba(74, 86, 9, 0.85);
+    color: white;
+    border-radius: 24px;
+    padding: 12px 36px;
+  }
+}
+.toast {
+  &-show {
+    bottom: 30px;
+    transition: bottom 0.2s ease-out;
+  }
+  &-hidden {
+    bottom: -100px;
+    transition: bottom 0.2s ease-in;
+  }
+}

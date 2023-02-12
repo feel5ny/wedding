@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/dist/output-scss.css" rel="stylesheet" />
+    <link href="/dist/output-tw.css" rel="stylesheet" />
+    <script type="module" src="./src/firebase.js"></script>
+    <script src="./src/swipe.js"></script>
+    <script
+      src="https://kit.fontawesome.com/8e16371472.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      type="text/javascript"
+      src="https://openapi.map.naver.com/openapi/v3/maps.js?ncpClientId=gxyxapecsp"
+    ></script>
+  </head>
+  <body class="overflow-hidden">
+    <main id="wrapper">
+      <section id="container">
+        <section class="hero">
+          <h1 class="hero-title">저희 결혼합니다</h1>
+          <p class="hero-subtitle">
+            2022년 4월 30일 12시 30분<br />프란치스코 작은형제회 수도원 성당
+          </p>
+          <div class="hero-center">
+            <div class="hero-heart">
+              <i
+                class="fa-solid fa-heart fa-beat fa-2xl"
+                style="--fa-animation-duration: 2s"
+              ></i>
+            </div>
+            <section class="hero-names-wrapper">
+              <ul class="hero-names">
+                <li>권순오</li>
+                <li>김나영</li>
+              </ul>
+            </section>
+          </div>
+          <button class="hero-arrow">
+            <i class="fa-solid fa-angles-down fa-xl fa-bounce"></i>
+          </button>
+          <div class="c-image hero-image"></div>
+        </section>
+        <section class="intro">
+          <p class="intro-title">
+            새로이 시작하는 작은 사랑이<br />보다 크고 깊은 사랑이 되려고
+            합니다.<br />
+            함께 자리하여 축복해 주시면<br />더 없는 기쁨이겠습니다.
+          </p>
+          <p class="intro-couple">
+            권혁민.이윤서의 장남<span class="intro-couple-name"
+              >권순오 알베르토</span
+            ><br />
+            김순호.김영란의 차녀<span class="intro-couple-name"
+              >김나영 글라라</span
+            >
+          </p>
+          <p class="intro-meeting">
+            2023년 4월 30일 일요일 12시 30분<br />
+            프란치스코 작은형제회 수도원 성당
+          </p>
+          <button class="intro-direct-calendar">
+            <i class="fa-solid fa-bell fa-shake"></i>
+            일정 등록하기
+          </button>
+        </section>
+        <section class="gallery"></section>
+        <section class="way-to-come">
+          <h3 class="c-title">오시는 길</h3>
+          <div id="map">
+            <button class="map-back-button">성당위치로 이동</button>
+          </div>
+          <p class="way-to-come-address">
+            서울시 중구 정동길 9 프란치스코<br />
+            작은형제회 수도원 성당
+          </p>
+          <ul class="way-to-come-list"></ul>
+          <section class="method-to-come">
+            <p class="method-to-come-notice">
+              주차장이 협소하고, 주말 시내 교통 체중이 예상되오니
+              <strong class="c-bold">대중교통</strong>을 이용해 주시기 바랍니다.
+            </p>
+            <section class="collapse-list">
+              <div class="collapse-box">
+                <div class="collapse-box-container">
+                  <div class="collapse-box-title unfold">지하철</div>
+                  <div class="collapse-box-body unfold subway">
+                    <div class="collapse-box-row">
+                      <div class="collapse-box-color-bar subway-line-5"></div>
+                      <div class="collapse-box-info">
+                        5호선 서대문역 5번 출구
+                        <p class="c-light">경향신문사 방향으로 7분거리</p>
+                      </div>
+                    </div>
+                    <div class="collapse-box-row">
+                      <div class="collapse-box-color-bar subway-line-1-2"></div>
+                      <div class="collapse-box-info">
+                        1.2호선 시청역 1,2,12번 출구
+                        <p class="c-light">
+                          덕수궁 방향에서 정동길을 따라 15분 거리
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="collapse-box">
+                <div class="collapse-box-container">
+                  <div class="collapse-box-title unfold">버스</div>
+                  <div class="collapse-box-body unfold bus">
+                    <div class="collapse-box-row">
+                      <div class="collapse-box-color-bar bus-blue"></div>
+                      <div class="collapse-box-info">
+                        간선(파랑)
+                        <p class="c-light">
+                          101, 103, 150, 160, 260, 270, 271, 273, 370, 470, 600,
+                          601, 602
+                        </p>
+                      </div>
+                    </div>
+                    <div class="collapse-box-row">
+                      <div class="collapse-box-color-bar bus-green"></div>
+                      <div class="collapse-box-info">
+                        일반
+                        <p class="c-light">790, 1002, 7019</p>
+                      </div>
+                    </div>
+                    <div class="collapse-box-row">
+                      <div class="collapse-box-color-bar bus-red"></div>
+                      <div class="collapse-box-info">
+                        광역
+                        <p class="c-light">
+                          1004, 8600, 8601, 9701, 9709, 9710, 9710-1, G6005
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+        </section>
+        <section class="notice">
+          <h3 class="c-title">안내 사항</h3>
+          <section class="collapse-list">
+            <div class="collapse-box">
+              <div class="collapse-box-container">
+                <div class="collapse-box-title unfold">주차 안내</div>
+                <div class="collapse-box-body unfold parking c-light">
+                  <div class="collapse-box-row">
+                    <p>승용차를 가져오시는 경우</p>
+                    <span class="c-bold">'창덕여자중학교'</span>
+                    주차장을 이용하시기 바랍니다.
+                  </div>
+                  <div class="collapse-box-button">
+                    <button class="button-type-02">
+                      <a href="https://naver.me/x1gjTBZT" target="_blank">
+                        창덕 여자 중학교 위치 보기
+                      </a>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="collapse-box">
+              <div class="collapse-box-container">
+                <div class="collapse-box-title unfold">화환 안내</div>
+                <div class="collapse-box-body unfold flower c-light">
+                  <div class="collapse-box-row">
+                    <span>축하 화환은 정중히 사양합니다.🙇🏻‍♂️🙇🏻‍♀️</span><br /><br />
+                    화환을 대신하여 어려운 이웃을 위해<br />
+                    쌀이나 성금으로 기부하실 수 있습니다.
+                  </div>
+                  <div>
+                    <div class="collapse-box-button">
+                      <button class="normal-button">기부 신청서</button>
+                      <button class="button-type-02">기부 문의하기</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class="bank">
+          <h3 class="c-title">마음 전하실 곳</h3>
+          <section class="collapse-list">
+            <div class="collapse-box">
+              <div class="collapse-box-container">
+                <div class="collapse-box-title unfold">신랑측 계좌번호</div>
+                <div class="collapse-box-body unfold parking c-light">
+                  <div class="collapse-box-row">
+                    국민은행 392802-04-034900<br />예금주: 권순오
+                  </div>
+                  <div class="collapse-box-button soono-bank">
+                    <a href="https://qr.kakaopay.com/Ej8SxK30j" target="_blank">
+                      <button class="normal-button">카카오 페이</button>
+                    </a>
+                    <button class="button-type-02">복사 하기</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="collapse-box">
+              <div class="collapse-box-container">
+                <div class="collapse-box-title unfold">신부측 계좌번호</div>
+                <div class="collapse-box-body unfold bank c-light">
+                  <div class="collapse-box-row">
+                    국민은행 392802-04-034900<br />예금주: 김나영
+                  </div>
+                  <div class="collapse-box-button nayoung-bank">
+                    <a href="https://qr.kakaopay.com/Ej8EMW8Ht" target="_blank">
+                      <button class="normal-button">카카오 페이</button>
+                    </a>
+                    <button class="button-type-02">복사 하기</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+        <!-- 
+        <section class="guest-book">
+          <h3 class="c-title">방명록</h3>
+          <div class="guest-book-buttons">
+            <button class="groom">
+              <img
+                class="button-image groom"
+                src="https://firebasestorage.googleapis.com/v0/b/wedding-29932.appspot.com/o/button-groom.png?alt=media&token=16f842af-a49d-4e88-afc8-e8dea66f90d6"
+              />
+            </button>
+            <button class="bride">
+              <img
+                class="button-image bride"
+                src="https://firebasestorage.googleapis.com/v0/b/wedding-29932.appspot.com/o/button-bride.png?alt=media&token=a8f15bb2-e710-432d-a2ac-f25dbf5dc6b4"
+              />
+            </button>
+          </div>
+          <p class="guest-book-buttons-caption">
+            사진을 누르시면, 입력가능합니다.
+          </p>
+          <ul class="guest-comment-list"></ul>
+          <footer>2023 feel5ny</footer>
+        </section>
+      -->
+      </section>
+      <div id="loading" class="loading">
+        <div>
+          <i
+            class="fa-solid fa-heart fa-beat fa-2xl"
+            style="--fa-animation-duration: 2s"
+          ></i>
+        </div>
+      </div>
+      <div id="preview" class="preview none">
+        <div class="preview-container">
+          <img class="preview-item" />
+          <div class="preview-navigation">
+            <div class="preview-navigation-top">
+              <p class="preview-page"></p>
+              <button class="preview-close">
+                <i class="fa-solid fa-xmark fa-xl"></i>
+              </button>
+            </div>
+            <div class="preview-navigation-horizontal">
+              <button class="preview-arrow preview-arrow-left">
+                <i class="fa-solid fa-arrow-down fa-xl fa-bounce"></i>
+              </button>
+              <button class="preview-arrow preview-arrow-right">
+                <i class="fa-solid fa-arrow-down fa-xl fa-bounce"></i>
+              </button>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <div id="toast" class="toast-hidden">
+        <p id="toast-message"></p>
+      </div>
+      <div id="dialog" class="none">
+        <div class="dialog-body">
+          <div class="check-password">
+            <p class="c-title">비밀번호 입력</p>
+            <input type="password" class="c-input input-password" placeholder="비밀번호를 입력해주세요"/>
+            <button class="button-type-02 check-password-button">제출하기</button>
+          </div>
+        </div>
+        <div class="dialog-dim"></div>
+      </div>
+      <div id="modal" class="none">
+        <div class="modal-body">
+          <div class="modal-loading none">
+            <i
+              class="fa-solid fa-heart fa-beat fa-2xl"
+              style="--fa-animation-duration: 2s"
+            ></i>
+          </div>
+          <div class="modal-contents"></div>
+        </div>
+        <div class="modal-dim"></div>
+      </div>
+    </main>
+    <script type="module" src="./src/index.js"></script>
+  </body>
+</html>

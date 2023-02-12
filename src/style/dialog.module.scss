@@ -1,0 +1,21 @@
+#dialog {
+  @include fixed-feedback-wrapper;
+  z-index: 250;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog {
+  &-body {
+    position: absolute;
+    background: white;
+    padding: 20px;
+    width: 300px;
+    min-width: 300px;
+    border-radius: 12px;
+  }
+  &-dim {
+    @include fixed-dim;
+  }
+}
