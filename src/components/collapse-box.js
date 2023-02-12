@@ -1,5 +1,5 @@
 import { showToast } from "./toast";
-
+import copy from "copy-to-clipboard";
 const $collapseBoxTitle = document.querySelectorAll(".collapse-box-title");
 const $collapseBoxBody = document.querySelectorAll(".collapse-box-body");
 const $copyNY = document.querySelector(".nayoung-bank");
@@ -25,7 +25,7 @@ function addEventListener() {
     const isCopyButton = event.target.className.includes("button-type-02");
     if (isCopyButton) {
       try {
-        await navigator.clipboard.writeText("권순오 국민은행 392802-04-034900");
+        await navigator.clipboard.writeText("권순오 신한은행 110-261-023544");
         showToast("복사가 완료되었습니다.");
       } catch (err) {
         showToast("복사가 실패하였습니다.");
@@ -37,13 +37,22 @@ function addEventListener() {
     const isCopyButton = event.target.className.includes("button-type-02");
     if (isCopyButton) {
       try {
-        await navigator.clipboard.writeText("김나영 국민은행 392802-04-034900");
-        showToast("복사가 완료되었습니다.");
+        if (copyText(text)) return showToast("복사가 완료되었습니다.");
+        return showToast("복사가 실패하였습니다.");
       } catch (err) {
         showToast("복사가 실패하였습니다.");
       }
     }
   });
+}
+
+async function copyText(text) {
+  if (navigator.clipboard) {
+    await navigator.clipboard.writeText(text);
+    return true;
+  }
+  if (copy(text)) return true;
+  return false;
 }
 
 function renderList() {}
