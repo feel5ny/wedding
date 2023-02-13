@@ -20,14 +20,11 @@ async function init() {
   initHandler();
   initHeartRain();
   initToast();
-  // await getImageList();
   initHero();
   initGallery();
   initPreview();
   initWayToCome();
   initCollapseBox();
-  // initGuestBook();
-  // initCommentList();
   initModal();
   initDialog();
   initLocationHash();
