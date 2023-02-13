@@ -1,13 +1,11 @@
 import "./swipe.js";
 import "./style/main.scss";
-import "./firebase.js";
 
 import { initGallery } from "./components/gallery";
 import { initHero } from "./components/hero";
 import { initPreview } from "./components/preview";
 import { initWayToCome } from "./components/way-to-come";
 import { initCollapseBox } from "./components/collapse-box";
-import { getImageList } from "./controller/get-image-list";
 import { initToast } from "./components/toast";
 import { initModal } from "./components/modal";
 import { initLocationHash } from "./controller/location-hash";

@@ -56,7 +56,7 @@ function renderList() {
     },
     {
       link: null,
-      icon: "https://firebasestorage.googleapis.com/v0/b/nayoung-wedding.appspot.com/o/icon%2Fcopy.png?alt=media&token=273614f3-1e0e-4a3d-a849-a92550f9ea68",
+      icon: "./assets/icon/copy.png",
       label: "주소 복사",
       type: "copy",
       isVisible: { mobile: true, desktop: true },

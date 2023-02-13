@@ -1,3 +1,4 @@
+import { isLoading } from "../controller/get-image-list";
 import { IMAGE_HERO_URL_LIST } from "../controller/store";
 import { createRandomNumber } from "../util";
 
@@ -12,6 +13,9 @@ export function initHero() {
 }
 
 function initHeroImage() {
+  setTimeout(function () {
+    isLoading(false);
+  }, 500);
   const randomIndex = createRandomNumber(0, 2);
   $heroImageSection.dataset.index = randomIndex;
   $heroImageSection.style.backgroundImage = `url('${IMAGE_HERO_URL_LIST[randomIndex]}')`;
