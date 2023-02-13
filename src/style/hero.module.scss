@@ -45,6 +45,7 @@
     left: 0;
     background-color: unset;
     transition: background-image 0.2s ease-in-out;
+    cursor: pointer;
   }
   &-center{
     height: calc(100vh - 180px);
