@@ -20,7 +20,7 @@ async function init() {
   initHandler();
   initHeartRain();
   initToast();
-  await getImageList();
+  // await getImageList();
   initHero();
   initGallery();
   initPreview();
