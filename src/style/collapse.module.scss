@@ -34,16 +34,17 @@
     border: 1px solid $subColor;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
     border-top-width: 0px;
+    padding: 16px;
+    padding-top: 10px;
     &.fold {
       height: 0px;
       border-bottom-width: 0px;
       transition: all .4s ease-in-out;
-      padding: 0px;    
+      padding-top: 0px;    
+      padding-bottom: 0px;    
       overflow: hidden;
     }
     &.unfold {
-      padding: 16px 0px;
-      padding-top: 10px;
       border-bottom-width: 1px;
       transition: all .4s ease-in-out;
       overflow: hidden;
@@ -54,10 +55,10 @@
         height: 252px;
       }
       &.flower {
-        height: 188px;
+        height: 160px;
       }
       &.bank {
-        height: 140px;
+        height: 300px;
       }
       &.parking {
         height: 140px;
@@ -65,7 +66,7 @@
     }
   }
   &-row {
-    padding: 10px 16px;
+    padding: 10px 0px;
     display: flex;
   }
   &-color-bar {
@@ -83,15 +84,30 @@
   }
 }
 
+.parking, .flower {
+  padding: 16px;
+}
+
 .parking, .flower, .bank {
-  &>.collapse-box-row {
-    display: block;
+  & > .collapse-box-section {
+    padding: 16px 0px;
+    border-bottom: 1px solid gray;
+    &:first-child {
+      padding-top: 0px;
+    }
+    &:last-child {
+      border: unset;
+    }
+    & > .collapse-box-row {
+      display: block;
+    }
   }
 }
 
 
 .collapse-box-button {
   text-align: center;
+  margin-top: 8px;
 }
 .subway-line-1-2 {
   background: linear-gradient(180deg, $subWayLine1 0%, $subWayLine1 50%, $subWayLine2 50%, $subWayLine2 100%);

@@ -2,8 +2,10 @@ import { showToast } from "./toast";
 import copy from "copy-to-clipboard";
 const $collapseBoxTitle = document.querySelectorAll(".collapse-box-title");
 const $collapseBoxBody = document.querySelectorAll(".collapse-box-body");
-const $copyNY = document.querySelector(".nayoung-bank");
-const $copySH = document.querySelector(".soono-bank");
+const $copyNy = document.querySelector(".nayoung-bank");
+const $copyNyParent = document.querySelector(".nayoung-parent-bank");
+const $copySh = document.querySelector(".soono-bank");
+const $copyShParent = document.querySelector(".soono-parent-bank");
 
 export function initCollapseBox() {
   addEventListener();
@@ -21,7 +23,7 @@ function addEventListener() {
     });
   });
 
-  $copySH.addEventListener("click", async function (event) {
+  $copySh.addEventListener("click", async function (event) {
     const isCopyButton = event.target.className.includes("button-type-02");
     if (!isCopyButton) return;
     const TEXT = "권순오 신한은행 110-261-023544";
@@ -34,10 +36,36 @@ function addEventListener() {
     }
   });
 
-  $copyNY.addEventListener("click", async function (event) {
+  $copyShParent.addEventListener("click", async function (event) {
+    const isCopyButton = event.target.className.includes("button-type-02");
+    if (!isCopyButton) return;
+    const TEXT = "이윤서 국민은행 669102-97-102433";
+    try {
+      if (copy(TEXT)) return showToast("복사가 완료되었습니다.");
+      return showToast("복사가 실패하였습니다.");
+    } catch (err) {
+      alert(JSON.stringify(err.message));
+      showToast("복사가 실패하였습니다.");
+    }
+  });
+
+  $copyNy.addEventListener("click", async function (event) {
     const isCopyButton = event.target.className.includes("button-type-02");
     if (!isCopyButton) return;
     const TEXT = "김나영 국민은행 392802-04-034900";
+    try {
+      if (copy(TEXT)) return showToast("복사가 완료되었습니다.");
+      return showToast("복사가 실패하였습니다.");
+    } catch (err) {
+      alert(JSON.stringify(err.message));
+      showToast("복사가 실패하였습니다.");
+    }
+  });
+
+  $copyNyParent.addEventListener("click", async function (event) {
+    const isCopyButton = event.target.className.includes("button-type-02");
+    if (!isCopyButton) return;
+    const TEXT = "김영란 국민은행 392801-04-027040";
     try {
       if (copy(TEXT)) return showToast("복사가 완료되었습니다.");
       return showToast("복사가 실패하였습니다.");
